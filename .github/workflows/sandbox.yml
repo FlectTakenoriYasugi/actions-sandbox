@@ -29,7 +29,7 @@ jobs:
 
     - name: rename 1.0.0-SNAPSHOT(${{ env.APP_NAME }})
       if: ${{ (github.event_name == 'workflow_dispatch' && github.ref_name == 'develop') }}
-      run: sed -i "0,/<version>[^<]*<\/version>/ s/<version>[^<]*-SNAPSHOT<\/version>/<version>1.0.${{ github.run_number }}-SNAPSHOT<\/version>/" dev/${{ inputs.APP_NAME }}/pom.xml
+      run: echo "ok"
     
     - name: regist exchange
       if: ${{
